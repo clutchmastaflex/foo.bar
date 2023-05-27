@@ -1,1 +1,11 @@
-
+import math
+def solution(area):
+    res = []
+    while area > 0:
+        totalmaterialnum = int(area)
+        messynum = math.sqrt(totalmaterialnum)
+        cleannum = math.floor(messynum)
+        bigsquare = cleannum*cleannum
+        area -= bigsquare
+        res.append(bigsquare)
+    return res
